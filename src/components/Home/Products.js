@@ -1,18 +1,16 @@
 "use client";
 
-import React from 'react'
-import Loader from '../Loader';
-import { useProducts } from '@/utility/contextState.js/ProductContext';
+import React from "react";
+import Loader from "../Loader";
+import { useProducts } from "@/utility/contextState.js/ProductContext";
+import { ShoppingCartIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 const Products = () => {
-
-
-  const {isLoading, error} = useProducts()
-
-
+  const { isLoading, error } = useProducts();
 
   return (
-   <div className="p-4">
+    <div className="p-4">
       {isLoading && <Loader />}
       {error && <p className="text-red-500">{error.message}</p>}
 
@@ -79,7 +77,7 @@ const Products = () => {
         <p>No products found</p>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Products
+export default Products;

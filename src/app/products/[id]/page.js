@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import {
   ArrowLeftIcon,
-  ShoppingCartIcon,
   HeartIcon,
   StarIcon,
   ShieldCheckIcon,
@@ -13,6 +12,7 @@ import {
   ArrowsPointingOutIcon,
 } from "@heroicons/react/24/outline";
 import { StarIcon as SolidStarIcon } from "@heroicons/react/24/solid";
+import { ShoppingCartIcon } from "@heroicons/react/20/solid";
 
 const ProductDetails = () => {
   const { id } = useParams();
