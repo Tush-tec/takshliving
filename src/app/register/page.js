@@ -2,11 +2,10 @@
 
 import React, { useState } from "react";
 import { LockClosedIcon } from "@heroicons/react/20/solid";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import { useAuth } from "@/utility/contextState.js/AuthContext";
 
-const register = () => {
+const Register = () => {
   const { register, error } = useAuth();
 
   const [registerData, setRegisterData] = useState({
@@ -59,7 +58,6 @@ const register = () => {
         <form className="flex flex-col gap-5 w-full">
           <div className="space-y-4">
             <div>
-             
               <input
                 id="email"
                 placeholder="your@email.com"
@@ -72,7 +70,6 @@ const register = () => {
             </div>
 
             <div>
-              
               <input
                 id="username"
                 placeholder="Choose a username"
@@ -84,7 +81,6 @@ const register = () => {
             </div>
 
             <div>
-             
               <input
                 id="fullname"
                 placeholder="Your full name"
@@ -96,7 +92,6 @@ const register = () => {
             </div>
 
             <div>
-             
               <input
                 id="password"
                 placeholder="Create a password"
@@ -109,7 +104,6 @@ const register = () => {
             </div>
 
             <div>
-              
               <div className="flex items-center gap-3">
                 <label
                   htmlFor="avatar"
@@ -157,4 +151,4 @@ const register = () => {
   );
 };
 
-export default register;
+export default Register;

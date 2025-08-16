@@ -2,14 +2,7 @@
 
 import { useProducts } from "@/utility/contextState.js/ProductContext";
 import React, { useEffect, useState } from "react";
-import {
-  FunnelIcon,
-  StarIcon,
-  ShoppingCartIcon,
-  HeartIcon,
-  XMarkIcon,
-  ArrowsUpDownIcon,
-} from "@heroicons/react/24/outline";
+import { FunnelIcon } from "@heroicons/react/24/outline";
 import { useCategory } from "@/utility/contextState.js/ProductCategory/CategoryContext";
 import Link from "next/link";
 
