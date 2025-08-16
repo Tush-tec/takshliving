@@ -20,36 +20,8 @@ const ProductsPage = () => {
     fetchCategories();
   }, []);
 
-  console.log("check categories", categories);
-
-  //   const categories = [
-  //     { name: "Sofas" },
-  //     { name: "Chairs" },
-  //     { name: "Beds" },
-  //     // Add more categories
-  //   ];
-
-  //   const priceRanges = [
-  //     "Under ₹10,000",
-  //     "₹10,000 - ₹25,000",
-  //     "₹25,000 - ₹50,000",
-  //     "Over ₹50,000",
-  //   ];
-
   return (
     <div className="min-h-screen bg-amber-50">
-      {/* Page Header */}
-      {/* <div className="bg-amber-800 text-white py-6">
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-serif font-bold">
-            Handcrafted Furniture
-          </h1>
-          <p className="text-amber-200">
-            Discover timeless pieces for your home
-          </p>
-        </div>
-      </div> */}
-
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row gap-8">
@@ -173,11 +145,12 @@ const ProductsPage = () => {
                         <span className="text-lg font-bold text-amber-800">
                           ₹{item.price?.toLocaleString("en-IN")}
                         </span>
-                        <button className="text-amber-700 hover:text-amber-900">
-                          <Link href={`/products/${item._id}`}>
-                            View Details
-                          </Link>
-                        </button>
+                        <Link
+                          href={`/products/${item._id}`}
+                          className="text-amber-700 hover:text-amber-900"
+                        >
+                          View Details
+                        </Link>
                       </div>
                     </div>
                   </div>
