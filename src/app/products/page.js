@@ -21,7 +21,7 @@ const ProductsPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-amber-50">
+    <div className="min-h-screen  section-wrapper">
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row gap-8">

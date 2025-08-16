@@ -66,7 +66,7 @@ export default function Home() {
           <HomeCategory />
         </div>
 
-        <div className=" sm:px-8 lg:px-16">
+        <div className=" ">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="space-y-6">
               <p className="text-4xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900">
@@ -97,7 +97,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="sm:px-8 lg:px-16 py-12 ">
+        <div className=" py-12 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className=" border bg-zinc-700 rounded-2xl p-5 h-[500px] overflow-y-auto hide-scrollbar  space-y-5">
               <div className="px-5 ">

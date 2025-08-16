@@ -45,12 +45,12 @@ const ProductDetails = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-amber-50 py-8">
+    <div className="section-wrapper  py-8">
       <div className="container mx-auto px-4">
-        <button className="flex items-center text-amber-700 mb-6 hover:underline">
+        {/* <button className="flex items-center text-amber-700 mb-6 hover:underline">
           <ArrowLeftIcon className="w-5 h-5 mr-1" />
           Back to Products
-        </button>
+        </button> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-white p-4 rounded-xl shadow-sm">
