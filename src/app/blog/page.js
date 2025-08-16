@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const page = () => {
-  return (
-    <div>
-        this is contact page
-    </div>
-  )
-}
+const Blog = () => {
+  return <div>this is contact page</div>;
+};
 
-export { page}
+export { page };

@@ -14,7 +14,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { StarIcon as SolidStarIcon } from "@heroicons/react/24/solid";
 
-const page = () => {
+const ProductDetails = () => {
   const { id } = useParams();
   const { fetchProductsbyId, products } = useProducts();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -253,4 +253,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProductDetails;
