@@ -4,4 +4,4 @@ const About = () => {
   return <div>this is abotu page</div>;
 };
 
-export default page;
+export default About;
