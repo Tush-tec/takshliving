@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import logo from "next/image";
 const Navbar = () => {
   const headerLinks = [
     {
@@ -26,14 +26,14 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="container mx-auto">
-      <nav className="grid grid-cols-3  items-center py-5 px-20 ">
-        <div>
+    <header className="container mx-auto ">
+      <nav className="grid grid-cols-3  items-center py-2">
+        <div className=" ">
           <Link href="/">
             <img
-              src="https://deshvideshprod.s3.ap-south-1.amazonaws.com/website-static/logo-light-theme.webp"
+              src="https://res.cloudinary.com/ddbs9k8be/image/upload/v1755352771/optimized_images/xcndubyfu7pqjj7haldf.jpg"
               alt="logo"
-              className="w-20 object-cover "
+              className="w-80  h-20  relative top-2  object-cover "
             />
           </Link>
         </div>

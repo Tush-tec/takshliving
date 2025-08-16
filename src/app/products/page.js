@@ -11,6 +11,7 @@ import {
   ArrowsUpDownIcon,
 } from "@heroicons/react/24/outline";
 import { useCategory } from "@/utility/contextState.js/ProductCategory/CategoryContext";
+import Link from "next/link";
 
 const ProductsPage = () => {
   const { fetchAllProducts, products } = useProducts();
@@ -45,7 +46,7 @@ const ProductsPage = () => {
   return (
     <div className="min-h-screen bg-amber-50">
       {/* Page Header */}
-      <div className="bg-amber-800 text-white py-6">
+      {/* <div className="bg-amber-800 text-white py-6">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-serif font-bold">
             Handcrafted Furniture
@@ -54,7 +55,7 @@ const ProductsPage = () => {
             Discover timeless pieces for your home
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-8">
@@ -156,12 +157,35 @@ const ProductsPage = () => {
                     key={item._id}
                     className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300"
                   >
-                    <div className="relative pb-[75%] bg-amber-100 overflow-hidden">
+                    <div className="relative pb-[75%] bg-amber-100 overflow-hidden group">
                       <img
                         src={item.mainImage}
                         alt={item.name}
-                        className="absolute h-full w-full object-cover transition duration-500 hover:scale-105"
+                        className="absolute h-full w-full object-cover transition duration-500 group-hover:scale-105"
                       />
+
+                      <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <h3 className="text-white font-medium text-lg">
+                          {item.name}
+                        </h3>
+                      </div>
+                    </div>
+
+                    <div className="p-4">
+                      <h3 className="text-lg font-medium text-amber-900 mb-2">
+                        {item.name}
+                      </h3>
+
+                      <div className="flex justify-between items-center">
+                        <span className="text-lg font-bold text-amber-800">
+                          ₹{item.price?.toLocaleString("en-IN")}
+                        </span>
+                        <button className="text-amber-700 hover:text-amber-900">
+                          <Link href={`/products/${item._id}`}>
+                            View Details
+                          </Link>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ))

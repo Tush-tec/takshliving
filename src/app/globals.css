@@ -25,9 +25,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
   line-height: 1.2;
 }
 
@@ -37,16 +38,51 @@ h1 {
   font-weight: 700;
 }
 
-@media (min-width: 640px) { /* sm: */
+@media (min-width: 640px) {
+  /* sm: */
   h1 {
     font-size: 2.5rem; /* 40px */
   }
 }
 
-@media (min-width: 1024px) { /* lg: */
+@media (min-width: 1024px) {
+  /* lg: */
   h1 {
-    font-size: 3rem; /* 48px */
+    font-size: 5rem; /* 48px */
   }
+}
+
+.section-wrapper {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-wrapper {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .section-wrapper {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-wrapper {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .section-wrapper {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .section-wrapper {
+    max-width: 1400px;
+  } /* you can adjust here */
 }
 
 /* H2 Responsive */
@@ -86,18 +122,17 @@ h3 {
 }
 
 .scrolled {
-    top: -10rem;
-    padding: 0.5rem;
-    background-color: #f7f7f7;
-    background-color: #DBEAFE;
-    color: rgb(0, 0, 0);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  top: -10rem;
+  padding: 0.5rem;
+  background-color: #f7f7f7;
+  background-color: #dbeafe;
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .hide-scrollbar::-webkit-scrollbar {

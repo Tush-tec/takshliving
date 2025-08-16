@@ -48,6 +48,10 @@ const getAllProducts = async () => {
 //   );
 // };
 
+const getProductById = async (id) => {
+  return apiClient.get(`products/item/${id}`);
+};
+
 const getCategories = async () => {
   return apiClient.get(`categories/get-categories/`);
 };
@@ -93,6 +97,7 @@ export {
   getCategories,
   getHomeProducts,
   getAllProducts,
+  getProductById,
   getUSP,
   getSightSeeing,
   getLocation,

@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState } from "react";
 import { requestHandler } from "../app";
-import { getAllProducts } from "@/api/api";
+import { getAllProducts, getProductById } from "@/api/api";
 
 const ProductContext = createContext({
   products: [],
@@ -11,6 +11,7 @@ const ProductContext = createContext({
   homeProduct: async () => {},
   allProducts: async () => {},
   getIndividualProducts: async () => {},
+  fetchProductsbyId: async (id) => {},
 });
 
 const useProducts = () => {
@@ -55,9 +56,31 @@ const ProductProvider = ({ children }) => {
     }
   };
 
+  const fetchProductsbyId = async (id) => {
+    setIsLoading(true);
+
+    await requestHandler(
+      async () => getProductById(id),
+      setIsLoading,
+      (res) => {
+        setProducts(res.data);
+      },
+      (err) => {
+        setError(err || err.message);
+      }
+    );
+  };
+
   return (
     <ProductContext.Provider
-      value={{ fetchAllProducts, isLoading, error, hasMore, products }}
+      value={{
+        fetchAllProducts,
+        fetchProductsbyId,
+        isLoading,
+        error,
+        hasMore,
+        products,
+      }}
     >
       {children}
     </ProductContext.Provider>

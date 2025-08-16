@@ -6,10 +6,9 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-const HeroSectionSwiper = ({items}) => {
-
+const HeroSectionSwiper = ({ items }) => {
   return (
-    <div className="w-full relative">
+    <div className="w-full relative container mx-auto">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
@@ -29,10 +28,10 @@ const HeroSectionSwiper = ({items}) => {
               />
               <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60 rounded-lg"></div>
               <div className="absolute bottom-16 left-8 text-white">
-                <h2 className="text-4xl font-bold drop-shadow-md animate-fade-in">
+                <h1 className="text-4xl font-bold drop-shadow-md animate-fade-in">
                   {item.title}
-                </h2>
-                <p className="text-lg mt-2 drop-shadow-sm animate-fade-in delay-200">
+                </h1>
+                <p className="text-3xl mt-2 drop-shadow-sm animate-fade-in delay-200">
                   {item.description}
                 </p>
               </div>

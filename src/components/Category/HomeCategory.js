@@ -11,8 +11,8 @@ const HomeCategory = () => {
   }, []);
 
   return (
-    <div className="container mx-auto">
-      <h2 className="text-center mb-8">
+    <div className="container mx-auto py-12">
+      <h2 className="text-center mb-12">
         <span className="italic font-serif">Elevating Spaces</span> with{" "}
         <span className="text-amber-600">Craftsmanship and Design</span>
       </h2>
@@ -27,7 +27,10 @@ const HomeCategory = () => {
             >
               <Link href={`/${item._id}`}>
                 <img
-                  src={item.image}
+                  src={item.image.replace(
+                    "/upload/",
+                    "/upload/w_600,h_750,c_fill/"
+                  )}
                   alt={item.categoryName}
                   className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full object-cover shadow-md hover:scale-105 transition-transform duration-300"
                 />
