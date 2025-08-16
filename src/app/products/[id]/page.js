@@ -22,7 +22,7 @@ const ProductDetails = () => {
   const [selectedColor, setSelectedColor] = useState(null);
 
   useEffect(() => {
-    if (id) fetchProductsbyId(id);
+    fetchProductsbyId(id);
   }, [id]);
 
   if (!products)

@@ -26,7 +26,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="container mx-auto ">
+    <header className="section-wrapper mx-auto ">
       <nav className="grid grid-cols-3  items-center py-2">
         <div className=" ">
           <Link href="/">

@@ -113,13 +113,15 @@ const Login = () => {
         </form>
 
         <div className="text-center text-sm text-amber-700">
-          Don't have an account?{" "}
-          <Link
-            href="/register"
-            className="text-amber-800 font-medium hover:underline"
-          >
-            Create one
-          </Link>
+          {"Don't have an account? "}
+          <span>
+            <Link
+              href="/register"
+              className="text-amber-800 font-medium hover:underline"
+            >
+              Create one
+            </Link>
+          </span>
         </div>
 
         <div className="relative mt-4">
@@ -132,15 +134,6 @@ const Login = () => {
             </span>
           </div>
         </div>
-
-        {/* <div className="flex gap-4 justify-center mt-4">
-      <button className="p-2 rounded-full border border-amber-200 hover:bg-amber-50 transition">
-        <GoogleIcon className="h-5 w-5 text-amber-600" />
-      </button>
-      <button className="p-2 rounded-full border border-amber-200 hover:bg-amber-50 transition">
-        <FacebookIcon className="h-5 w-5 text-amber-600" />
-      </button>
-    </div> */}
       </div>
     </div>
   );

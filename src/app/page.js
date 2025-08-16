@@ -99,27 +99,25 @@ export default function Home() {
 
         <div className="sm:px-8 lg:px-16 py-12 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Left Section */}
             <div className=" border bg-zinc-700 rounded-2xl p-5 h-[500px] overflow-y-auto hide-scrollbar  space-y-5">
-              {/* Image Section */}
               <div className="px-5 ">
                 <img
                   src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg"
-                  alt=""
+                  alt="chair_img"
                   className="object-cover w-full rounded-2xl"
                 />
               </div>
               <div className="px-5 ">
                 <img
                   src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg"
-                  alt=""
+                  alt="chair_img"
                   className="object-cover w-full rounded-2xl"
                 />
               </div>
               <div className="px-5 ">
                 <img
                   src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg"
-                  alt=""
+                  alt="chair_img"
                   className="object-cover w-full rounded-2xl"
                 />
               </div>
@@ -139,13 +137,12 @@ export default function Home() {
                     <div className="h-40 md:h-50 w-full  ">
                       <img
                         src={item.img}
-                        alt={item.title}
+                        alt={item.title || "chair_img"}
                         className="object-cover  w-full h-full rounded-2xl"
                       />
                     </div>
 
                     <div className="flex flex-col justify-center  ">
-                      {" "}
                       <h3 className="text-xl font-medium mb-2">
                         Lorem ipsum dolor sit
                       </h3>
@@ -160,37 +157,6 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="bg-white py-10 px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-            Why Choose Us?
-          </h2>
-          <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
-            <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <CheckBadgeIcon className="mx-auto w-12 h-12 text-red-500" />
-              <h3 className="text-lg font-semibold mt-2">Premium Quality</h3>
-              <p className="text-gray-600">Crafted with top-notch materials.</p>
-            </div>
-
-            <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <TagIcon className="mx-auto w-12 h-12 text-green-500" />
-              <h3 className="text-lg font-semibold mt-2">Affordable Prices</h3>
-              <p className="text-gray-600">
-                Luxury furniture at unbeatable prices.
-              </p>
-            </div>
-
-            <div className="p-6 bg-gray-50 rounded-lg shadow-md">
-              <TruckIcon className="mx-auto w-12 h-12 text-blue-500" />
-              <h3 className="text-lg font-semibold mt-2">
-                Fast & Free Delivery
-              </h3>
-              <p className="text-gray-600">
-                Enjoy hassle-free doorstep delivery.
-              </p>
             </div>
           </div>
         </div>
