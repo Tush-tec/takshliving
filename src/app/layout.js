@@ -1,4 +1,3 @@
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -29,7 +28,7 @@ export default function RootLayout({ children }) {
       >
         <ContextProvider>
           <NavbarWrapper>{children}</NavbarWrapper>
-          </ContextProvider>
+        </ContextProvider>
       </body>
     </html>
   );

@@ -1,12 +1,17 @@
+import HomeCategory from "@/components/Category/HomeCategory";
 import HeroSection from "@/components/HeroSection";
 import HeroSectionSwiper from "@/components/HeroSectionSwiper";
 import Products from "@/components/Home/Products";
-import { ArrowRightIcon, CheckBadgeIcon, TagIcon, TruckIcon } from "@heroicons/react/20/solid";
+import {
+  ArrowRightIcon,
+  CheckBadgeIcon,
+  TagIcon,
+  TruckIcon,
+} from "@heroicons/react/20/solid";
 import Image from "next/image";
 
 export default function Home() {
-
-    const images = [
+  const images = [
     {
       url: "https://images.unsplash.com/photo-1615803796379-b4cda8e9c09c?w=1200&auto=format&fit=crop&q=80",
       title: "Experience Serenity",
@@ -54,26 +59,19 @@ export default function Home() {
 
   return (
     <>
+      <HeroSectionSwiper items={images} />
 
-      <HeroSectionSwiper
-        items={images}
-
-      />
-
-       <section className="container bg-white mx-auto px-4 py-8 mt-10">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-          The Latest Excuse to Rearrange Your Living Room (Again)
-        </h2>
-        {/* <Products /> */}
-      </section>
-        {/* <HeroSection 
+      <div>
+        <HomeCategory />
+      </div>
+      {/* <HeroSection 
           imgURL="https://t3.ftcdn.net/jpg/03/20/06/16/360_F_320061630_qTwTYsIEPJO62ubp5bzF41Pob4oJug5b.jpg"
           titleText="Explore the World"
           subtitle="Discover the beauty of the world"
           altText="bannerImg"
 
         /> */}
-             <section className="py-16 px-4 sm:px-8 lg:px-16 container mx-auto">
+      <div className="py-16 px-4 sm:px-8 lg:px-16 container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-light leading-tight text-gray-900">
@@ -102,7 +100,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      <div>
+        <div className="container bg-white mx-auto px-4 py-8 mt-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+            The Latest Excuse to Rearrange Your Living Room (Again)
+          </h2>
+          <div />
+        </div>
+      </div>
 
       {/* Image Section */}
 
@@ -139,32 +146,35 @@ export default function Home() {
             {checkSection &&
               checkSection.length > 0 &&
               checkSection.map((item, index) => (
-                  <div key={item.id} className={`flex flex-col md:flex-row  gap-6 rounded-lg border-gray-300  mb-5  border  py-5 px-5 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`} >
-                    <div className="h-40 md:h-50 w-full  ">
-                    
-                      <img
-                        src={item.img}
-                        alt={item.title}
-                        className="object-cover  w-full h-full rounded-2xl"
-                      />
-                    </div>
-
-                    <div className="flex flex-col justify-center  ">
-                      {" "}
-                      <h3 className="text-xl font-medium mb-2">
-                        Lorem ipsum dolor sit
-                       
-                      </h3>
-                       <span className="border border-amber-600 w-60 mb-2"></span>
-                      <p className="text-gray-600 line-clamp-5">
-                        Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Ratione quam quae fugit
-                        debitis fugiat quia omnis delectus sed repudiandae officia
-                        eos illo totam, ut consequatur exercitationem doloribus
-                        soluta libero beatae.
-                      </p>
-                    </div>
+                <div
+                  key={item.id}
+                  className={`flex flex-col md:flex-row  gap-6 rounded-lg border-gray-300  mb-5  border  py-5 px-5 ${
+                    index % 2 === 0 ? "" : "md:flex-row-reverse"
+                  }`}
+                >
+                  <div className="h-40 md:h-50 w-full  ">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="object-cover  w-full h-full rounded-2xl"
+                    />
                   </div>
+
+                  <div className="flex flex-col justify-center  ">
+                    {" "}
+                    <h3 className="text-xl font-medium mb-2">
+                      Lorem ipsum dolor sit
+                    </h3>
+                    <span className="border border-amber-600 w-60 mb-2"></span>
+                    <p className="text-gray-600 line-clamp-5">
+                      Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Ratione quam quae fugit
+                      debitis fugiat quia omnis delectus sed repudiandae officia
+                      eos illo totam, ut consequatur exercitationem doloribus
+                      soluta libero beatae.
+                    </p>
+                  </div>
+                </div>
               ))}
           </div>
         </div>
@@ -211,8 +221,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      
     </>
   );
 }

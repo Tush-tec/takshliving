@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
-import { AuthProvider } from "@/utility/contextState.js/AuthContext";
 
 export default function NavbarWrapper({ children }) {
   const pathName = usePathname();
