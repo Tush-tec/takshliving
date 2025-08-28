@@ -1,14 +1,19 @@
 "use client";
-import { useCategory } from "@/utility/contextState.js/ProductCategory/CategoryContext";
+import { getCategories } from "@/api/api";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
 
-const HomeCategory = () => {
-  const { fetchCategories, categories } = useCategory();
+const HomeCategory = ({ categoriesData }) => {
+  // const { fetchCategories, categories } = useCategory();
 
-  useEffect(() => {
-    fetchCategories();
-  }, []);
+  // useEffect(() => {
+  //   fetchCategories();
+  // }, []);`
+
+  const categories = categoriesData.categories;
+
+  console.log("console data", categories);
 
   return (
     <div className="container mx-auto py-12">
@@ -26,11 +31,14 @@ const HomeCategory = () => {
               className="flex flex-col items-center text-center max-w-xs"
             >
               <Link href={`/${item._id}`}>
-                <img
-                  src={item.image.replace(
-                    "/upload/",
-                    "/upload/w_600,h_750,c_fill/"
-                  )}
+                <Image
+                  width={600}
+                  height={750}
+                  src={item.image}
+                  // // .replace( for optimizations
+                  //   "/upload/",
+                  //   "/upload/w_600,h_750,c_fill/"
+                  // )
                   alt={item.categoryName}
                   className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full object-cover shadow-md hover:scale-105 transition-transform duration-300"
                 />

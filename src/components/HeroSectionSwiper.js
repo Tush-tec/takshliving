@@ -8,7 +8,7 @@ import "swiper/css/effect-fade";
 
 const HeroSectionSwiper = ({ items }) => {
   return (
-    <div className="w-full relative container  mx-auto">
+    <div className="w-full ">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}

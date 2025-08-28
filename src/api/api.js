@@ -10,10 +10,7 @@ import axios from "axios";
 // });
 
 const apiClient = axios.create({
-  baseURL:
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:8080/api/v1"
-      : "https://dev-com-backend.vercel.app/api/v1",
+  baseURL: "https://dev-com-backend.vercel.app/api/v1",
   withCredentials: true,
   timeout: 120000,
 });

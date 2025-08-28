@@ -1,16 +1,10 @@
+import { getCategories } from "@/api/api";
 import HomeCategory from "@/components/Category/HomeCategory";
-import HeroSection from "@/components/HeroSection";
 import HeroSectionSwiper from "@/components/HeroSectionSwiper";
-import Products from "@/components/Home/Products";
-import {
-  ArrowRightIcon,
-  CheckBadgeIcon,
-  TagIcon,
-  TruckIcon,
-} from "@heroicons/react/20/solid";
-import Image from "next/image";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import React from "react";
 
-export default function Home() {
+const Home = ({ passData }) => {
   const images = [
     {
       url: "https://images.unsplash.com/photo-1615803796379-b4cda8e9c09c?w=1200&auto=format&fit=crop&q=80",
@@ -63,7 +57,7 @@ export default function Home() {
 
       <div className=" space-y-12  mx-auto section-wrapper">
         <div>
-          <HomeCategory />
+          <HomeCategory categoriesData={passData} />
         </div>
 
         <div className=" ">
@@ -163,4 +157,27 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export const getServerSideProps = async () => {
+  try {
+    const getResData = await getCategories();
+
+    const passData = getResData.data.data;
+
+    return {
+      props: {
+        passData,
+      },
+    };
+  } catch (error) {
+    console.error(error || error.message);
+    return {
+      props: {
+        passData: [],
+      },
+    };
+  }
+};
+
+export default Home;
