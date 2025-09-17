@@ -163,7 +163,7 @@ export const getServerSideProps = async () => {
   try {
     const getResData = await getCategories();
 
-    const passData = getResData.data.data;
+      const passData = getResData.data.data;
 
     return {
       props: {
